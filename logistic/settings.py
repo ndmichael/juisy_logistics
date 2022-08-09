@@ -21,12 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-mbu_(l@887p&ew27xka6%g1m)ctv*fbs$h!)_a(&5*rg&c308r'
+# SECRET_KEY = 'django-insecure-mbu_(l@887p&ew27xka6%g1m)ctv*fbs$h!)_a(&5*rg&c308r'
+SECRET_KEY = os.environ.get("SECRET_KEY_SDELIVERY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = os.environ.get("DEBUG_VALUE") == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['targeco.herokuapp.com', 'https://targeco.co', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -135,3 +137,8 @@ MEDIA_URL = "/media/"
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# aws setup
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME_SDELIVERY')
