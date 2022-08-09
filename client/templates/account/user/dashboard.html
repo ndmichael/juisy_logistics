@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section id="navbackground">
+    <div class="container">
+        <section class="row">
+            <div class="col-12 col-md-6 mx-auto text-center">
+                <h1 class="text-light">Welcome <span class="text-white">{{request.user.username}}</span>
+                </h1>
+                <p class="text-light">
+                    Admin are the only ones allowed to create pacakge logistics.
+                    <br /> Each User created will automatically act as sender.
+                </p>
+                <p class="pt-4">
+                    <a href="{% url 'create-shipment' %}" class=" btn btn-primary btn-lg col-8">
+                        CREATE LOGISTIC</a>
+                </p>
+            </div>
+        </section>
+    </div>
+</section>
+<section id="dashboard">
+    <div class="container py-5">
+        <div class="row ">
+            <div class="col-12">
+                <table class="table">
+                    <thead class="bg-primary text-light">
+                        <th>Package Name</th>
+                        <th>Client Name</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Paid</th>
+                        <th>Tracking Code</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        {% for item in items %}
+                        <tr>
+                            <td>{{item.item_name}}</td>
+                            <td>{{item.item_reciever.fullname}}</td>
+                            <td>{{item.date_sent}}</td>
+                            <td>{{item.status}}</td>
+                            <td>{{item.paid}}</td>
+                            <td>{{item.item_code}}</td>
+                            <td>
+                                <a href="" class=" btn btn-sm btn-success">
+                                    update item
+                                </a>
+                            </td>
+                        </tr>
+
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

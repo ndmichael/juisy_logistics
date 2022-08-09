@@ -1,0 +1,355 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section id="header" class="shadow" style="position: relative;">
+    <div class=" container">
+        <div class=" row">
+            <div class=" col-12 col-md-6" style="margin-top: 24vh;">
+                <h1 class="animate__animated animate__zoomInDown">
+                    Targe Co-operation Logistic, and Courier Services.
+                </h1>
+                <p class="py-4">
+                    We deliver consignments to your door step at ease.
+                </p>
+                <p class=" d-grid col-6">
+                    <a href="{% url 'shipment_track' %}" class="btn btn-lg rounded-pill btn-primary animate__animated animate__slideInUp">
+                        TRACKING
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="brief-abt" class="py-3 py-md-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 text-center mx-auto">
+                <p class="animate__animated animate__flipInX animate__delay-1s">
+                    <b class=" secondary_color" style="font-size: 26px; ">
+                        Our Awesome Services.
+                    </b> <br />
+                    <span class=" text-muted">
+                        We make world wide deliveries to
+                        any
+                        part of the
+                        world.
+                    </span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 feature">
+    <article class=" container">
+        <div class="row gx-5">
+            <article class="col-12 col-md-4">
+                <div class="p-3  px-5 py-0 ft-features">
+                    <img src="{% static '/shipment/images/plane_service1.jpg' %}" alt="" class="img-fluid shadow rounded" style="transform:translateY(-50px)">
+                    <div>
+                        <h3 class="pb-3">Air Freight</h3>
+                        <p>
+                            We provide air freight Services, providing shipments of goods through air, to all major and minor airports.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-12 col-md-4">
+                <div class="p-3  px-5 py-0 ft-features">
+                    <img src="{% static '/shipment/images/ship_service1.jpg' %}" alt="" class="img-fluid shadow rounded" style="transform:translateY(-50px)">
+                    <div>
+                        <h3 class="pb-3">Sea Freight</h3>
+                        <p>
+                            Our services span shipement of goods securely and handling all custom duties.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-12 col-md-4">
+                <div class="p-3  px-5 py-0 ft-features">
+                    <img src="{% static '/shipment/images/truck3.jpg' %}" alt="" class="img-fluid shadow rounded" style="transform:translateY(-50px)">
+                    <div>
+                        <h3 class="pb-3">Land Freight</h3>
+                        <p>
+                            Our network relationships with thousand carriers, are dependable source of door to door delivery...
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="row pt-5">
+            <article class="col-12 col-md-4 mx-auto text-center pt-5">
+                <a href="" class="col-8 btn btn-primary btn-lg rounded-pill">
+                    EXPLORE NOW
+                </a>
+            </article>
+        </div>
+    </article>
+</section>
+
+<section id="features" class="py-5 bg-light">
+    <article class=" container">
+        <div class="row">
+            <article class=" col-12 col-md-6">
+                <div>
+                    <img src="{% static '/shipment/images/truck_green.png' %}" alt="" class="img-fluid " style="object-fit: cover;">
+                </div>
+            </article>
+            <article class="col-12 col-md-6 align-self-center">
+                <div class="row">
+                    <div class="col-12 pb-5">
+                        <p class="text-muted"><b>Our Features</b></p>
+                        <h6>
+                            Why Choose Us?
+                        </h6>
+                    </div>
+                    <div class="col-12 col-md-6 pb-3">
+                        <div class="rounded d-flex">
+                            <span>
+                                <span
+                                    class=" icofont icofont-headphone-alt-2 icofont-pull-left icofont-2x">
+                                </span>
+                            </span>
+                            <div>
+                                <h5><b>Customer Care</b></h5>
+                                <p>
+                                    24/7 dedicated support team. we at your service.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 pb-3">
+                        <div class=" d-flex">
+                            <span>
+                                <span
+                                    class=" icofont icofont-truck-alt icofont-pull-left icofont-2x"></span>
+                            </span>
+                            <div class="ml-3 pl-3">
+                                <h5><b>Cargo Insurance</b></h5>
+                                <p>Safe and fast delivery of all cargoes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 pb-3">
+                        <div class=" d-flex">
+                            <span>
+                                <span
+                                    class=" icofont icofont-location-pin icofont-pull-left icofont-2x text-warning"></span>
+                            </span>
+                            <div class="ml-3 pl-3">
+                                <h5><b>Cargo Tracking</b></h5>
+                                <p>AI fast tracking system</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 pb-3">
+                        <div class=" d-flex">
+                            <span>
+                                <span
+                                    class=" icofont icofont-price icofont-pull-left icofont-2x"></span>
+                            </span>
+                            <div class="ml-3 pl-3">
+                                <h5><b>Transparent Price</b></h5>
+                                <p>Irrespenctive of tight regulations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </article>
+</section>
+
+<!--our top clients -->
+<section id="partners" class="py-5">
+    <div class="container">
+        <section class="row">
+            <article class="col-12 col-md-4">
+                <div>
+                    <h1 class="h3">
+                        Some Of Our Trusted <span class=" secondary_color">Partners</span> And
+                        <span class=" secondary_color">Clients</span>.
+                    </h1>
+                </div>
+            </article>
+            <article class=" col-12 col-md-8">
+                <div class="d-flex justify-content-between partners">
+                    <img src="{% static '/shipment/images/UPS-logo.png' %}" alt="" class="img-fluid">
+                    <img src="{% static '/shipment/images/united-logo.png' %}" alt="" class="img-fluid">
+                    <img src="{% static '/shipment/images/fedex-logo.png' %}" alt="" class="img-fluid">
+                    <img src="{% static '/shipment/images/maersk-logo.png' %}" alt="" class="img-fluid">
+                    <img src="{% static '/shipment/images/qatar-logo.png' %}" alt="" class="img-fluid">
+                </div>
+
+            </article>
+        </section>
+    </div>
+</section>
+
+<section id="services2" class=" shadow">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 ">
+
+            </div>
+            <div class="col-12 col-md-6 " style="margin-top: 17vh;">
+                <ul>
+                    <li>Fast and Secured Delivery.</li>
+                    <li>AI and drone delivery system.</li>
+                    <li>Simple Tracking.</li>
+                    <li>Free Packaging</li>
+                </ul>
+                <div class="d-flex flex-row justify-content-start pt-5">
+                    <span class="ps-4 pe-4">
+                        <h4>400,000 +</h4>
+                        <p>Items Delivered</p>
+                    </span>
+                    <span>
+                        <h4>In 39+</h4>
+                        <p>Countries</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class=" container">
+        <div class="row mb-2 mb-md-4">
+            <article class="col-12 col-sm-6 col-md-4 text-end">
+                <div>
+                    <p class="secondary_color">Client Success Stories</p>
+                    <h1 class="h3">
+                        Successful stories, Why our clients trust us
+                    </h1>
+                </div>
+
+            </article>
+            <article class="col-12 col-sm-6 col-md-4">
+                <div class="d-flex shadow-sm p-4 bg-white testimonial" data-aos="zoom-in">
+                    <i class=" icofont icofont-quote-left icofont-4x icofont-pull-left text-light"></i>
+                    <div class="">
+                        <p>Need your rest of mind then use Targe Logistics, will recommend to all.
+                        </p>
+                        <div class="text-end">
+                            <p>
+                                <img src="{% static '/shipment/images/client1.jpg' %}" alt="" class="img-fluid rounded-circle shadow" style="width: 70px; height: 70px; object-fit: cover; object-position: top;">
+                            </p>
+                            <p>
+                                <b>Monalisa C. Carter</b> <br />
+                                <small>Life Coach</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-12 col-sm-6 col-md-4">
+                <div class="d-flex shadow-sm p-4 bg-white testimonial" data-aos="zoom-in">
+                    <i class=" icofont icofont-quote-left icofont-4x icofont-pull-left text-light"></i>
+                    <div>
+                        <p>
+                            Nothing short of excellence, Service was top notch, I got more than I expected.
+                        </p>
+                        <div class="text-end">
+                            <p>
+                                <img src="{% static '/shipment/images/client2.jpg' %}" alt="" class="img-fluid rounded-circle shadow" style="width: 70px; height: 70px; object-fit: cover; object-position: top;">
+                            </p>
+                            <p>
+                                <b>Kessler K.</b> <br />
+                                <small>Bank Executive</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-12 col-sm-6 col-md-6"></article>
+        </div>
+        <!-- end of row div-->
+
+        <div class="row">
+            <article class="col-12 col-sm-6 col-md-4">
+                <div class="d-flex shadow-sm p-4 bg-white testimonial" data-aos="zoom-in-up">
+                    <i class=" icofont icofont-quote-left icofont-4x icofont-pull-left text-light"></i>
+                    <div>
+                        <p>I am hard to impressed but I am greatly Impressed, Great delivery service take it or take it.
+                        </p>
+                        <div class="text-end">
+                            <p>
+                                <img src="{% static '/shipment/images/client3.jpg' %}" alt="" class="img-fluid rounded-circle shadow" style="width: 70px; height: 70px; object-fit: cover; object-position: top;">
+                            </p>
+                            <p>
+                                <b>Jane Yin</b> <br />
+                                <small>Artiste & Developer</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-12 col-sm-6 col-md-4">
+                <div class="d-flex shadow-sm p-4 bg-white testimonial" data-aos="zoom-in-up">
+                    <i class=" icofont icofont-quote-left icofont-4x icofont-pull-left text-light"></i>
+                    <div>
+                        <p>
+                            Every business person out there needs a logistic service to transact cross border businesses.
+                        </p>
+                        <div class="text-end">
+                            <p>
+                                <img src="{% static '/shipment/images/client5.jpg' %}" alt="" class="img-fluid rounded-circle shadow" style="width: 70px; height: 70px; object-fit: cover; object-position: top;">
+                            </p>
+                            <p>
+                                <b>Jacques Cisneros John</b> <br />
+                                <small>Business Owner</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-12 col-sm-6 col-md-4">
+                <div class="d-flex shadow-sm p-4 bg-white testimonial" data-aos="zoom-in-up">
+                    <i class=" icofont icofont-quote-left icofont-4x icofont-pull-left text-light"></i>
+                    <div>
+                        <p>Hello Targe Crew, A smile speaks a thousand words, At Ease At Speed With love Logistic.
+                        </p>
+                        <div class="text-end">
+                            <p>
+                                <img src="{% static '/shipment/images/client6.jpg' %}" alt="" class="img-fluid rounded-circle" style="width: 70px; height: 70px; object-fit: cover; object-position: top;">
+                            </p>
+                            <p>
+                                <b>Hedvig Isaksson</b> <br />
+                                <small>Sales Agent</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-12 col-sm-6 col-md-6"></article>
+        </div>
+        <!-- end of row div-->
+    </div>
+</section>
+
+
+<section id="shipment">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3 p-5 text-center">
+                <h3>
+                    <span class=" secondary_color">Targe Logistics
+                        Freights.</span> <br /> We bring you awesomeness, Start your journey today.
+                </h3>
+                <div class="py-5 d-flex justify-content-evenly">
+                    <a href="{% url 'contact' %}" class="btn btn-primary btn-lg rounded-pill">CREATE
+                        SHIPMENT</a>
+                    <!-- <a href="#" class="btn btn-outline-primary btn-lg">CONTACT US</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
