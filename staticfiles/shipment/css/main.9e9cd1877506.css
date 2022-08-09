@@ -81,8 +81,8 @@
 #header {
     min-height: 85vh;
     width: 100%;
-    /* background-image: linear-gradient(to bottom, rgba(54, 55, 149, 0.9), rgba(54, 55, 151, 0.4)), url("/static/shipment/images/bg1.jpg"); */
-    background-image: linear-gradient(135deg, rgba(0, 97, 242, .7) 0%, rgba(105, 0, 199, .8) 100%), url("/static/shipment/images/bg23.jpg");
+    /* background-image: linear-gradient(to bottom, rgba(54, 55, 149, 0.9), rgba(54, 55, 151, 0.4)), url("/static/shipment/images/bg1.347bd5af4c57.jpg"); */
+    background-image: linear-gradient(135deg, rgba(0, 97, 242, .7) 0%, rgba(105, 0, 199, .8) 100%), url("/static/shipment/images/bg23.a64c3f05c7f1.jpg");
     background-size: cover;
     background-position: center;
     color: #FFFFFF;
@@ -91,7 +91,7 @@
 .feature {
     min-height: 70vh;
     width: 100%;
-    background-image: url("/static/shipment/images/Transparent-background-with-dots.png");
+    background-image: url("/static/shipment/images/Transparent-background-with-dots.d697425e990f.png");
     background-size: cover;
     background-position: center;
 }
@@ -99,7 +99,7 @@
 #services2 {
     min-height: 80vh;
     width: 100%;
-    background-image: linear-gradient(to right, rgba(11, 14, 211, 0.4), rgba(11, 14, 211, 0.8)), url("/static/shipment/images/delivery.jpg");
+    background-image: linear-gradient(to right, rgba(11, 14, 211, 0.4), rgba(11, 14, 211, 0.8)), url("/static/shipment/images/delivery.078e425545c4.jpg");
     background-size: cover;
     background-position: left;
     color: #FFFFFF;
