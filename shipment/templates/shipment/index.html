@@ -45,10 +45,10 @@
         <div class="row gx-5">
             <article class="col-12 col-md-4">
                 <div class="p-3  px-5 py-0 ft-features">
-                    <img src="{% static '/shipment/images/plane_service1.jpg' %}" alt="" class="img-fluid shadow rounded" style="transform:translateY(-50px)">
+                    <img src="{% static '/shipment/images/plane_service1.jpg' %}" alt="" class="img-fluid shadow rounded" style="transform:translateY(-50px)" data-aos="zoom-out-down" data-aos-delay="100">
                     <div>
-                        <h3 class="pb-3">Air Freight</h3>
-                        <p>
+                        <h3 class="pb-3" data-aos="fade-up" data-aos-delay="200">Air Freight</h3>
+                        <p data-aos="fade-up" data-aos-delay="300">
                             We provide air freight Services, providing shipments of goods through air, to all major and minor airports.
                         </p>
                     </div>
@@ -57,10 +57,10 @@
 
             <article class="col-12 col-md-4">
                 <div class="p-3  px-5 py-0 ft-features">
-                    <img src="{% static '/shipment/images/ship_service1.jpg' %}" alt="" class="img-fluid shadow rounded" style="transform:translateY(-50px)">
+                    <img src="{% static '/shipment/images/ship_service1.jpg' %}" data-aos="zoom-out-down" data-aos-delay="100" alt="" class="img-fluid shadow rounded" style="transform:translateY(-50px)">
                     <div>
-                        <h3 class="pb-3">Sea Freight</h3>
-                        <p>
+                        <h3 class="pb-3" data-aos="fade-up" data-aos-delay="200">Sea Freight</h3>
+                        <p data-aos="fade-up" data-aos-delay="300">
                             Our services span shipement of goods securely and handling all custom duties.
                         </p>
                     </div>
@@ -69,10 +69,10 @@
 
             <article class="col-12 col-md-4">
                 <div class="p-3  px-5 py-0 ft-features">
-                    <img src="{% static '/shipment/images/truck3.jpg' %}" alt="" class="img-fluid shadow rounded" style="transform:translateY(-50px)">
+                    <img src="{% static '/shipment/images/deliveryman2.jpg' %}" data-aos="zoom-in-up" data-aos-delay="100" alt="" class="img-fluid shadow rounded" style="transform:translateY(-50px)">
                     <div>
-                        <h3 class="pb-3">Land Freight</h3>
-                        <p>
+                        <h3 class="pb-3" data-aos="fade-up" data-aos-delay="200">Land Freight</h3>
+                        <p data-aos="fade-up" data-aos-delay="300">
                             Our network relationships with thousand carriers, are dependable source of door to door delivery...
                         </p>
                     </div>
@@ -82,7 +82,7 @@
 
         <div class="row pt-5">
             <article class="col-12 col-md-4 mx-auto text-center pt-5">
-                <a href="" class="col-8 btn btn-primary btn-lg rounded-pill">
+                <a href="{% url 'shipment_about' %}" class="col-8 btn btn-primary btn-lg rounded-pill">
                     EXPLORE NOW
                 </a>
             </article>
@@ -90,12 +90,12 @@
     </article>
 </section>
 
-<section id="features" class="py-5 bg-light">
+<section id="features" class="py-5 bg-white shadow">
     <article class=" container">
         <div class="row">
             <article class=" col-12 col-md-6">
-                <div>
-                    <img src="{% static '/shipment/images/truck_green.png' %}" alt="" class="img-fluid " style="object-fit: cover;">
+                <div class="p-sm-5">
+                    <img src="{% static '/shipment/images/deliveryman1.jpg' %}" alt="" data-aos="zoom-out-right" class="img-fluid" style="object-fit: cover;">
                 </div>
             </article>
             <article class="col-12 col-md-6 align-self-center">
@@ -107,7 +107,7 @@
                         </h6>
                     </div>
                     <div class="col-12 col-md-6 pb-3">
-                        <div class="rounded d-flex">
+                        <div class="rounded d-flex" data-aos="fade-left" data-aos-delay="100">
                             <span>
                                 <span
                                     class=" icofont icofont-headphone-alt-2 icofont-pull-left icofont-2x">
@@ -122,7 +122,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 pb-3">
-                        <div class=" d-flex">
+                        <div class=" d-flex" data-aos="fade-left" data-aos-delay="100">
                             <span>
                                 <span
                                     class=" icofont icofont-truck-alt icofont-pull-left icofont-2x"></span>
@@ -134,7 +134,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 pb-3">
-                        <div class=" d-flex">
+                        <div class=" d-flex" data-aos="fade-left" data-aos-delay="200">
                             <span>
                                 <span
                                     class=" icofont icofont-location-pin icofont-pull-left icofont-2x text-warning"></span>
@@ -146,7 +146,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 pb-3">
-                        <div class=" d-flex">
+                        <div class="d-flex" data-aos="fade-left" data-aos-delay="200">
                             <span>
                                 <span
                                     class=" icofont icofont-price icofont-pull-left icofont-2x"></span>
@@ -165,25 +165,38 @@
 </section>
 
 <!--our top clients -->
-<section id="partners" class="py-5">
+<section id="partners" class="py-5 bg-light">
     <div class="container">
         <section class="row">
-            <article class="col-12 col-md-4">
-                <div>
-                    <h1 class="h3">
-                        Some Of Our Trusted <span class=" secondary_color">Partners</span> And
-                        <span class=" secondary_color">Clients</span>.
-                    </h1>
-                </div>
+            <article class="col-12 col-md-4 align-self-center">
+                <h1 class="h3">
+                    Some Of Our Trusted <span class=" secondary_color">Partners</span> And
+                    <span class=" secondary_color">Clients</span>.
+                </h1>
             </article>
             <article class=" col-12 col-md-8">
-                <div class="d-flex justify-content-between partners">
-                    <img src="{% static '/shipment/images/UPS-logo.png' %}" alt="" class="img-fluid">
-                    <img src="{% static '/shipment/images/united-logo.png' %}" alt="" class="img-fluid">
-                    <img src="{% static '/shipment/images/fedex-logo.png' %}" alt="" class="img-fluid">
-                    <img src="{% static '/shipment/images/maersk-logo.png' %}" alt="" class="img-fluid">
-                    <img src="{% static '/shipment/images/qatar-logo.png' %}" alt="" class="img-fluid">
-                </div>
+                <section class="row">
+                    <div class="col-6 col-md-3">
+                        <div class="p-3 shadow-sm text-center bg-white rounded-3 my-2">
+                            <img src="{% static '/shipment/images/UPS-logo.png' %}" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="p-3 shadow-sm text-center bg-white rounded-3 my-2">
+                            <img src="{% static '/shipment/images/united-logo.png' %}" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="p-3 shadow-sm text-center bg-white rounded-3 my-2">
+                            <img src="{% static '/shipment/images/fedex-logo.png' %}" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="p-3 shadow-sm text-center bg-white rounded-3 my-2">
+                            <img src="{% static '/shipment/images/maersk-logo.png' %}" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </section>
 
             </article>
         </section>
@@ -343,7 +356,7 @@
                         Freights.</span> <br /> We bring you awesomeness, Start your journey today.
                 </h3>
                 <div class="py-5 d-flex justify-content-evenly">
-                    <a href="{% url 'contact' %}" class="btn btn-primary btn-lg rounded-pill">CREATE
+                    <a href="{% url 'contact' %}" class="btn btn-primary btn-lg rounded-pill" data-aos="zoom-in-up">CREATE
                         SHIPMENT</a>
                     <!-- <a href="#" class="btn btn-outline-primary btn-lg">CONTACT US</a> -->
                 </div>

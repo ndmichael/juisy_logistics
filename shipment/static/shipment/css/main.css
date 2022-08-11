@@ -12,7 +12,8 @@
 
 #partners img {
     width: 150px;
-    height: 50px !important;
+    height: 100px !important;
+    object-fit: contain;
 }
 
 .ft-features {

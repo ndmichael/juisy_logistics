@@ -36,7 +36,7 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-light">
         <div class="container">
             <a class="navbar-brand text-warning" href="/">
-                <img src="{% static '/shipment/images/targelogo.png' %}" alt="" style="height: 45px !important;">
+                <img src="{% static '/shipment/images/logo1.png' %}" alt="" style="height: 55px !important;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,7 +52,7 @@
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link text-warning" aria-current="page" href="{% url 'account_login' %}">LOGIN</a>
+                        <a class="nav-link text-warning" aria-current="page" href="{% url 'account_login' %}">ADMIN</a>
                     </li>
                     {% endif %}
                 </ul>
