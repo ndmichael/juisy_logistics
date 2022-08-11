@@ -4,6 +4,12 @@
     /* color: #0047AB; */
 }
 
+html,
+body {
+    width: auto !important;
+    overflow-x: hidden !important;
+}
+
 .btn-primary {
     background: #4169e1;
     border-radius: 22, 5px;
