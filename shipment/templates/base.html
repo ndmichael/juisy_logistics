@@ -23,11 +23,18 @@
 
     <!-- Flash message-->
     {% if messages %}
-    <div class="row" style="position: relative;">
+    <div class="row fixed-top" style="z-index: 999; padding: 5em 0;">
         <div class="col-12 offset-sm-3 col-sm-6 text-center">
             {% for message in messages %}
-            <div class="alert p-3 alert-{{ message.tags }}" style=" position:absolute; top:70px; z-index: 100; width: 100%;">
-                <h5>{{ message }}</h5>
+            <div class="alert p-3 alert-{{ message.tags }} alert-dismissable fade show">
+                {{ message }}
+                <span class=" icofont-pull-right">
+                    <b>
+                        <button type="button" class="btn-close"
+                            data-bs-dismiss="alert" aria-label="Close"></button>
+                    </b>
+                </span>
+
             </div>
             {% endfor %}
         </div>
