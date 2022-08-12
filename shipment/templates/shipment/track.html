@@ -41,7 +41,7 @@
                 <div style="position: relative; z-index: 100; ">
                     <span class="border bg-white border" style="position: absolute; width: 260px; height: 10px; left: 75px; top: 40px; z-index: 1; display: block;"></span>
                     <div class="shadow-sm rounded-circle d-flex justify-content-center align-items-center bg-white" style="position: relative; width: 80px; height: 80px; z-index: 4;">
-                        {% if item.shipped and item.paid %}
+                        {% if item.paid %}
                         <i class=" secondary_color icofont icofont-paper-plane icofont-3x"></i> {% else %}
                         <i class="icofont icofont-paper-plane icofont-3x text-dark"></i> {% endif %}
                     </div>

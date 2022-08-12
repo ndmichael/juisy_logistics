@@ -34,6 +34,7 @@ def create_shipment(request):
             item_obj = i_form.save(commit=False)
             item_obj.item_sender = sender_obj
             item_obj.item_reciever = receiver_obj
+            item_obj.paid  = True
 
             item_obj.save()
 
