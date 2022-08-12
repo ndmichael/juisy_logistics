@@ -138,6 +138,10 @@ MEDIA_URL = "/media/"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
+
+# ALLAUTH CONFIG
+LOGIN_REDIRECT_URL = "/"
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # aws setup
