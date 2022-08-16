@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 # from django.contrib.auth.forms import UserCreationForm
 from allauth.account.forms import SignupForm, LoginForm
-from shipment.models import ItemDetail, ItemReciever, ItemSender
+from shipment.models import ItemDetail, ItemReciever, ItemSender, Status
 
 
 
@@ -71,3 +71,4 @@ class ItemForm(forms.ModelForm):
         widgets = {
           'description': forms.Textarea(attrs={'rows':2}),
         }
+

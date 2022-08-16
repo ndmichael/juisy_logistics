@@ -1,7 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.http import JsonResponse, HttpResponse
-from shipment.forms import ItemTrackForm, ContactForm
+from shipment.forms import (
+    ItemTrackForm, ContactForm, EditStatusForm,
+    EditSenderForm, EditClientForm, EditItemForm
+)
 from shipment.models import ItemDetail
 from django.core.mail import send_mail, BadHeaderError
 
@@ -58,3 +61,70 @@ def contact (request):
         'title': 'contact Us'
     }                           
     return render(request, 'shipment/contact.html', context)
+
+def editSender(request, slug):
+    item = ItemDetail.objects.get(slug=slug)
+    sender = item.item_sender
+    if request.method == "POST":
+        form = EditSenderForm(request.POST, instance=sender)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f"Sender details updated successfully.")
+            return redirect("client-dashboard", request.user.username)
+    else:
+        form = EditSenderForm(instance=sender)
+    context = {
+        'title': "targe-editor",
+        's_form': form
+    }
+    return render(request, 'shipment/editsender.html', context)
+
+def editClient(request, slug):
+    item = ItemDetail.objects.get(slug=slug)
+    receiver = item.item_receiver
+    if request.method == "POST":
+        form = EditClientForm(request.POST, instance=receiver)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f"Client details updated successfully.")
+            return redirect("client-dashboard", request.user.username)
+    else:
+        form = EditClientForm(instance=receiver)
+    context = {
+        'title': "targe-editor sender",
+        'form': form
+    }
+    return render(request, 'shipment/editclient.html', context)  
+
+def editItem(request, slug):
+    item = ItemDetail.objects.get(slug=slug)
+    if request.method == "POST":
+        form = EditItemForm(request.POST, request.FILES, instance=item)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f"Item updated successfully.")
+            return redirect("client-dashboard", request.user.username)
+        else:
+            print("form not valid.")
+    else:
+        form = EditItemForm(instance=item)
+    context = {
+        'title': "targe-editor sender",
+        'form': form
+    }
+    return render(request, 'shipment/edititem.html', context)      
+
+def editStatus(request, id):
+    item = ItemDetail.objects.get(id=id)
+    if request.method == "POST":
+        form = EditStatusForm(request.POST, instance=item.item_status)
+        if form.is_valid():
+            s_form = form.save(commit=False)
+            s_form.item = item
+            s_form.save()
+            messages.success(request, f"Status set successfully.")
+            return redirect("client-dashboard", request.user.username)
+    else:
+        form = EditStatusForm(instance=item.item_status)
+    context = {'form': form}
+    return render(request, 'shipment/editstatus.html', context)

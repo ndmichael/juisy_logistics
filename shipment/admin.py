@@ -1,15 +1,16 @@
 from django.contrib import admin
-from .models import ItemSender, ItemDetail, ItemReciever
+from .models import ItemSender, ItemDetail, ItemReciever, Status
 
 
-class ItemDetailInline(admin.TabularInline):
-    model = ItemDetail
-    raw_id_fields = ['item_sender']
+class StatusInline(admin.TabularInline):
+    model = Status
 
 
 @admin.register(ItemDetail)
 class ItemDetailAdmin(admin.ModelAdmin):
-    list_display = ['item_name', 'slug', 'quantity','description', 'weight', 'image', 'paid', 'status', 'problem_type', 'item_code', 'date_sent', 'date_recieved']
+    model = ItemDetail
+    list_display = ['item_name', 'quantity','description', 'weight',  'paid', 'item_code', 'date_sent', 'date_recieved']
+    inlines = [StatusInline]
     prepopulated_fields = {"slug": ("item_name",)}
 
 

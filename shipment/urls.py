@@ -1,12 +1,20 @@
 from django.urls import path
-from shipment import views as shipment_views
+from shipment.views import (
+    index, contact, track_item,
+    about,services, editStatus,
+    editSender, editClient, editItem,
+)
 
 # app_name = 'shop'
 
 urlpatterns = [
-    path('', shipment_views.index, name='shipment_index'),
-    path('about/', shipment_views.about, name='shipment_about'),
-    path('contact/', shipment_views.contact, name='contact'), 
-    path('tracking/', shipment_views.track_item, name='shipment_track'),
-    path('service/', shipment_views.services, name='shipment_service'),  
+    path('', index, name='shipment_index'),
+    path('about/', about, name='shipment_about'),
+    path('contact/', contact, name='contact'), 
+    path('tracking/', track_item, name='shipment_track'),
+    path('service/', services, name='shipment_service'),  
+    path('edit/sender/<str:slug>/', editSender, name='edit_sender'), 
+    path('edit/client/<str:slug>/', editClient, name='edit_client'), 
+    path('edit/item/<str:slug>/', editItem, name='edit_item'), 
+    path('edit/status/<int:id>/', editStatus, name='edit_status'),  
 ]

@@ -5,6 +5,7 @@ from datetime import timedelta
 from django.urls import reverse
 import secrets, string
 from django.utils.text import slugify
+from django_countries.fields import CountryField
 
 # Create your models here.
 
@@ -19,7 +20,9 @@ class ItemSender(models.Model):
     address =  models.CharField(max_length=300, blank=True, null=True)
     postal_code = models.CharField(max_length=150, blank=False, null=False)
     city = models.CharField(max_length=100, blank=False, null=False)
-    country = models.CharField(max_length=100, blank=False, null=False)
+    country = CountryField(
+        blank_label="(select a country)",
+    )
     date_sent = models.DateTimeField(default=timezone.now)
 
     class Meta:
@@ -39,10 +42,12 @@ class ItemReciever(models.Model):
     sender = models.ForeignKey(ItemSender, on_delete=models.CASCADE, related_name="sender_to_receiver")
     fullname = models.CharField(max_length=250, blank=False, null=False)
     email = models.EmailField(max_length=200, blank=False, null=False)
-    address =  models.CharField(max_length=300, blank=False, null=False)
+    address =  models.CharField(max_length=300, blank=True, null=True)
     postal_code = models.CharField(max_length=150, blank=False, null=False)
     city = models.CharField(max_length=100, blank=False, null=False)
-    country = models.CharField(max_length=100, blank=False, null=False)
+    country = CountryField(
+        blank_label="(select a country)",
+    )
     date_created = models.DateTimeField(default=timezone.now)
 
     class Meta:
@@ -57,23 +62,8 @@ class ItemDetail (models.Model):
         Item details model
     '''
 
-    STATUS= (
-        ('transit', 'ON TRANSIT'),
-        ('withheld', 'WITHHELD'), 
-        ('sent', 'SENT'),
-        ('delivered', 'DELIVERED'),       
-    )
-
-    PROBLEM = (
-        ('no problem', 'No Problems'),
-        ('paperwork', 'PAPERWORK_OVERLOAD'),
-        ('custom clerance', 'CUSTOM CLEARANCE'),
-        ('bad weather', 'BAD WEATHER'),
-        ('holidays', 'HOLYDAYS'),
-    )
-
     item_sender = models.ForeignKey(ItemSender, on_delete=models.CASCADE, related_name="item_sender")
-    item_reciever = models.ForeignKey(ItemReciever, on_delete=models.CASCADE, related_name="item_receiver")
+    item_receiver = models.ForeignKey(ItemReciever, on_delete=models.CASCADE, related_name="item_receiver")
     item_name = models.CharField(max_length=150)
     slug = models.CharField(max_length=150)
     quantity = models.IntegerField()
@@ -82,8 +72,6 @@ class ItemDetail (models.Model):
     image = models.ImageField(upload_to='package_photos', default='default.jpg')
     paid = models.BooleanField(default=False)
     shipped = models.BooleanField(default=False)
-    status = models.CharField(choices=STATUS, default='transit', max_length=15)
-    problem_type = models.CharField(choices=PROBLEM, default='NO PROBLEM', max_length=15)
     item_code = models.CharField(max_length=20)
     date_sent = models.DateTimeField(default=timezone.now)
     date_recieved = models.DateTimeField(default=timezone.now)
@@ -104,3 +92,25 @@ class ItemDetail (models.Model):
 
     def __str__(self):
         return f'{self.item_name}'
+
+
+class Status(models.Model):
+    STATUS= (
+        ('transit', 'ON TRANSIT'),
+        ('withheld', 'WITHHELD'), 
+        ('sent', 'SENT'),
+        ('delivered', 'DELIVERED'),       
+    )
+
+    PROBLEM = (
+        ('no problem', 'No Problems'),
+        ('paperwork', 'PAPERWORK_OVERLOAD'),
+        ('custom clerance', 'CUSTOM CLEARANCE'),
+        ('bad weather', 'BAD WEATHER'),
+    )
+    item = models.OneToOneField(ItemDetail, on_delete=models.CASCADE, related_name="item_status")
+    status = models.CharField(choices=STATUS, default='transit', max_length=15)
+    problem_type = models.CharField(choices=PROBLEM, default='no problem', max_length=15)
+    country = CountryField(
+        blank_label="(select a country)",
+    )

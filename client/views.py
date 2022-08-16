@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import SenderForm, ItemForm, ReceiverForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from shipment.models import ItemDetail
+from shipment.models import ItemDetail, Status
 
 # Create your views here.
 
@@ -37,6 +37,8 @@ def create_shipment(request):
             item_obj.paid  = True
 
             item_obj.save()
+
+            Status.objects.create(item=item_obj) # create status when creating items
 
             messages.success(request, f"Logistics Created Successfully.")
             return redirect("client-dashboard", request.user.username)
