@@ -109,8 +109,8 @@ class Status(models.Model):
         ('bad weather', 'BAD WEATHER'),
     )
     item = models.OneToOneField(ItemDetail, on_delete=models.CASCADE, related_name="item_status")
-    status = models.CharField(choices=STATUS, default='transit', max_length=15)
-    problem_type = models.CharField(choices=PROBLEM, default='no problem', max_length=15)
+    status = models.CharField(choices=STATUS, default='transit', max_length=50)
+    problem_type = models.CharField(choices=PROBLEM, default='no problem', max_length=50)
     country = CountryField(
         blank_label="(select a country)",
     )
