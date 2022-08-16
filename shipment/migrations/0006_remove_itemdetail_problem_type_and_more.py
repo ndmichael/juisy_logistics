@@ -53,7 +53,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('status', models.CharField(choices=[('transit', 'ON TRANSIT'), ('withheld', 'WITHHELD'), ('sent', 'SENT'), ('delivered', 'DELIVERED')], default='transit', max_length=15)),
                 ('problem_type', models.CharField(choices=[('no problem', 'No Problems'), ('paperwork', 'PAPERWORK_OVERLOAD'), ('custom clerance', 'CUSTOM CLEARANCE'), ('bad weather', 'BAD WEATHER')], default='no problem', max_length=15)),
-                ('country', django_countries.fields.CountryField(max_length=2)),
+                ('country', django_countries.fields.CountryField(max_length=50)),
                 ('item', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='item_status', to='shipment.itemdetail')),
             ],
         ),
