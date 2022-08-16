@@ -68,11 +68,11 @@ class ItemDetail (models.Model):
     slug = models.CharField(max_length=150)
     quantity = models.IntegerField()
     description = models.TextField(max_length= 400, null=True, blank=True)
-    weight = models.CharField(max_length=10)
+    weight = models.CharField(max_length=100)
     image = models.ImageField(upload_to='package_photos', default='default.jpg')
     paid = models.BooleanField(default=False)
     shipped = models.BooleanField(default=False)
-    item_code = models.CharField(max_length=20)
+    item_code = models.CharField(max_length=100)
     date_sent = models.DateTimeField(default=timezone.now)
     date_recieved = models.DateTimeField(default=timezone.now)
     date_shipped = models.DateTimeField(default=timezone.now() + timedelta(1))
@@ -109,8 +109,8 @@ class Status(models.Model):
         ('bad weather', 'BAD WEATHER'),
     )
     item = models.OneToOneField(ItemDetail, on_delete=models.CASCADE, related_name="item_status")
-    status = models.CharField(choices=STATUS, default='transit', max_length=50)
-    problem_type = models.CharField(choices=PROBLEM, default='no problem', max_length=50)
+    status = models.CharField(choices=STATUS, default='transit', max_length=100)
+    problem_type = models.CharField(choices=PROBLEM, default='no problem', max_length=100)
     country = CountryField(
         blank_label="(select a country)",
     )
