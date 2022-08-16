@@ -40,12 +40,12 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='itemreciever',
             name='country',
-            field=django_countries.fields.CountryField(max_length=2),
+            field=django_countries.fields.CountryField(max_length=50),
         ),
         migrations.AlterField(
             model_name='itemsender',
             name='country',
-            field=django_countries.fields.CountryField(max_length=2),
+            field=django_countries.fields.CountryField(max_length=50),
         ),
         migrations.CreateModel(
             name='Status',
