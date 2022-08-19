@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY_SDELIVERY")
 DEBUG = True
 # DEBUG = os.environ.get("DEBUG_VALUE") == "True"
 
-ALLOWED_HOSTS = ['targeco.herokuapp.com', 'https://targeco.co', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['targeco.herokuapp.com', 'targeco.co', 'www.targeco.co', 'localhost', '127.0.0.1']
 
 
 # Application definition
