@@ -62,8 +62,8 @@ def contact (request):
     }                           
     return render(request, 'shipment/contact.html', context)
 
-def editSender(request, slug):
-    item = ItemDetail.objects.get(slug=slug)
+def editSender(request, slug, id):
+    item = ItemDetail.objects.get(slug=slug, id=id)
     sender = item.item_sender
     if request.method == "POST":
         form = EditSenderForm(request.POST, instance=sender)
@@ -79,8 +79,8 @@ def editSender(request, slug):
     }
     return render(request, 'shipment/editsender.html', context)
 
-def editClient(request, slug):
-    item = ItemDetail.objects.get(slug=slug)
+def editClient(request, slug, id):
+    item = ItemDetail.objects.get(slug=slug, id=id)
     receiver = item.item_receiver
     if request.method == "POST":
         form = EditClientForm(request.POST, instance=receiver)
@@ -96,8 +96,8 @@ def editClient(request, slug):
     }
     return render(request, 'shipment/editclient.html', context)  
 
-def editItem(request, slug):
-    item = ItemDetail.objects.get(slug=slug)
+def editItem(request, slug, id):
+    item = ItemDetail.objects.get(slug=slug, id=id)
     if request.method == "POST":
         form = EditItemForm(request.POST, request.FILES, instance=item)
         if form.is_valid():

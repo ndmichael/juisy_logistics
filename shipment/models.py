@@ -61,7 +61,6 @@ class ItemDetail (models.Model):
     '''
         Item details model
     '''
-
     item_sender = models.ForeignKey(ItemSender, on_delete=models.CASCADE, related_name="item_sender")
     item_receiver = models.ForeignKey(ItemReciever, on_delete=models.CASCADE, related_name="item_receiver")
     item_name = models.CharField(max_length=150)

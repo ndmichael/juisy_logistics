@@ -13,8 +13,8 @@ urlpatterns = [
     path('contact/', contact, name='contact'), 
     path('tracking/', track_item, name='shipment_track'),
     path('service/', services, name='shipment_service'),  
-    path('edit/sender/<str:slug>/', editSender, name='edit_sender'), 
-    path('edit/client/<str:slug>/', editClient, name='edit_client'), 
-    path('edit/item/<str:slug>/', editItem, name='edit_item'), 
+    path('edit/sender/<str:slug>/<int:id>/', editSender, name='edit_sender'), 
+    path('edit/client/<str:slug>/<int:id>/', editClient, name='edit_client'), 
+    path('edit/item/<str:slug>/<int:id>/', editItem, name='edit_item'), 
     path('edit/status/<int:id>/', editStatus, name='edit_status'),  
 ]
