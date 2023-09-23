@@ -3,15 +3,27 @@
         color: #4169e1 !important;
         /* color: #0047AB; */
     }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     
     html,
     body {
         width: auto !important;
     }
+
+    .btn{
+        font-family: 'Gotham Rounded';
+    }
     
     .btn-primary {
         background: #4169e1;
         border-radius: 22, 5px;
+        padding: 15px;
+
         box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(255, 255, 255, 0.25), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
     }
     
@@ -31,7 +43,11 @@
         -moz-backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(7px);
-        transform: translateY(40px);
+        /* transform: translateY(40px); */
+    }
+
+    .ft-features > img{
+        transform: translateY(-70px) !important;
     }
     
     #features .icofont {
@@ -85,7 +101,7 @@
     }
     
     #header {
-        min-height: 85vh;
+        height: 88vh !important;
         width: 100%;
         /* background-image: linear-gradient(to bottom, rgba(54, 55, 149, 0.9), rgba(54, 55, 151, 0.4)), url("/static/shipment/images/bg1.jpg"); */
         background-image: linear-gradient(135deg, rgba(0, 97, 242, .7) 0%, rgba(105, 0, 199, .8) 100%), url("/static/shipment/images/bg23.jpg");
@@ -126,11 +142,6 @@
         text-shadow: -2px 2px #000;
     }
     
-    #services2 p {
-        text-shadow: -2px 2px #080808;
-        font-weight: bold;
-    }
-    
     h1,
     h2,
     h3,
@@ -145,9 +156,10 @@
     }
     
     p {
-        font-family: 'Avalon';
-        letter-spacing: 1px;
-        line-height: 1.8;
+        /* font-family: 'Avalon'; */
+        font-family: 'Gotham Rounded';
+        color:#677381;
+        line-height: 1.4;
     }
     
     #header h1 {
