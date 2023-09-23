@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'shipment/base.html' %} {% load static %} {% block content %}
 <section id="header" class="shadow">
     <div class=" container">
         <div class=" row">
@@ -6,14 +6,12 @@
                 <h1 class="animate__animated animate__zoomInDown">
                     Targe Co-operation Logistic, and Courier Services.
                 </h1>
-                <p class="py-4">
+                <p class="py-4 text-light">
                     We deliver consignments to your door step at ease.
                 </p>
-                <p class="col-6">
-                    <a href="{% url 'shipment_track' %}" class="btn btn-lg rounded-pill btn-primary animate__animated animate__slideInUp">
-                        TRACKING
-                    </a>
-                </p>
+                <a href="{% url 'shipment_track' %}" class="btn btn-lg col-6 rounded-pill btn-primary animate__animated animate__slideInUp">
+                    TRACKING ITEMS
+                </a>
             </div>
         </div>
     </div>
@@ -23,17 +21,17 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 text-center mx-auto">
-                <p class="animate__animated animate__flipInX animate__delay-1s">
-                    <b class=" secondary_color" style="font-size: 26px; ">
+                <span class="animate__animated animate__flipInX animate__delay-1s">
+                    <h3 class=" secondary_color fw-bolder">
                         Our Awesome Services.
-                    </b> <br />
-                    <span class=" text-muted">
+                    </h3> <br />
+                    <p class=" text-muted">
                         We make world wide deliveries to
                         any
                         part of the
                         world.
-                    </span>
-                </p>
+                    </p>
+                </span>
 
             </div>
         </div>
@@ -42,22 +40,22 @@
 
 <section class="py-5 feature">
     <article class=" container">
-        <div class="row gx-md-5">
+        <div class="row g-5">
             <article class="col-12 col-md-4">
-                <div class="p-3  px-5 py-0 ft-features">
-                    <img src="{% static '/shipment/images/plane_service1.jpg' %}" alt="" class="img-fluid shadow rounded" style="transform:translateY(-50px)" data-aos="zoom-out-down" data-aos-delay="100">
+                <div class="p-5  ft-features">
+                    <img src="{% static '/shipment/images/plane_service1.jpg' %}" alt="" class="img-fluid shadow rounded">
                     <div>
                         <h3 class="pb-3" data-aos="fade-up" data-aos-delay="200">Air Freight</h3>
                         <p data-aos="fade-up" data-aos-delay="300">
-                            We provide air freight Services, providing shipments of goods through air, to all major and minor airports.
+                            We provide air freight, providing shipments of goods through air, to all major and minor airports.
                         </p>
                     </div>
                 </div>
             </article>
 
             <article class="col-12 col-md-4">
-                <div class="p-3  px-5 py-0 ft-features">
-                    <img src="{% static '/shipment/images/ship_service1.jpg' %}" data-aos="zoom-out-down" data-aos-delay="100" alt="" class="img-fluid shadow rounded" style="transform:translateY(-50px)">
+                <div class="p-5 ft-features">
+                    <img src="{% static '/shipment/images/ship_service1.jpg' %}" data-aos="zoom-out-down" data-aos-delay="100" alt="" class="img-fluid shadow rounded" >
                     <div>
                         <h3 class="pb-3" data-aos="fade-up" data-aos-delay="200">Sea Freight</h3>
                         <p data-aos="fade-up" data-aos-delay="300">
@@ -68,8 +66,8 @@
             </article>
 
             <article class="col-12 col-md-4">
-                <div class="p-3  px-5 py-0 ft-features">
-                    <img src="{% static '/shipment/images/deliveryman2.jpg' %}" data-aos="zoom-in-up" data-aos-delay="100" alt="" class="img-fluid shadow rounded" style="transform:translateY(-50px)">
+                <div class="p-5 ft-features">
+                    <img src="{% static '/shipment/images/deliveryman2.jpg' %}" data-aos="zoom-in-up" data-aos-delay="100" alt="" class="img-fluid shadow rounded">
                     <div>
                         <h3 class="pb-3" data-aos="fade-up" data-aos-delay="200">Land Freight</h3>
                         <p data-aos="fade-up" data-aos-delay="300">
