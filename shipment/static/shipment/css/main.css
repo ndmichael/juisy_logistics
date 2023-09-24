@@ -16,15 +16,24 @@
     }
 
     .btn{
-        font-family: 'Gotham Rounded';
+        font-weight: bold;
+        border-radius: 10px;
     }
     
     .btn-primary {
         background: #4169e1;
-        border-radius: 22, 5px;
-        padding: 10px;
+        --bs-btn-padding-x: 2.75rem;
+        --bs-btn-padding-y: 0.75rem;
+        border: 0;
+        position: relative;
+        box-shadow: 0px 15px 15px -10px rgba(65, 105, 225, 0.6);
+    }
 
-        box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(255, 255, 255, 0.25), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    .btn-warning{
+        --bs-btn-padding-x: 2.75rem;
+        --bs-btn-padding-y: 0.75rem;
+        position: relative;
+        box-shadow: 0px 15px 15px -10px rgba(21, 21, 21, 0.45);
     }
     
     #partners img {
@@ -236,6 +245,17 @@
     .testimonial:hover img {
         transform: scale(1.05, 1.05);
     }
+
+
+    #direct-contact {
+        padding: 50px;
+        background: linear-gradient(rgb(0,0,0,0.7), rgba(0,0,0,0.7)), url("/static/shipment/images/customercare.jpg");
+        background-position: center;
+        background-size: cover;
+        transition: .5s ease-in-out;  
+        color: white;
+    }
+
     /** footer **/
     
     #footer1 {
@@ -260,7 +280,7 @@
         background: linear-gradient(135deg, rgba(0, 97, 242, .8) 0%, rgba(105, 0, 199, .8) 100%);
         background-size: cover;
         background-position: bottom;
-        padding-top: 170px;
+        padding-top: 130px;
     }
     
     @media(max-width: 48em) {
