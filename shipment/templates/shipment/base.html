@@ -86,10 +86,10 @@
 
     {% block content %} {% endblock content %}
 
-    <footer class="border-top bg-dark text-white pb-0">
+    <footer class="border-top bg-dark text-white" id="footer1">
         <div class=" container">
             <div class="row">
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-4">
                     <div>
                         <img src="{% static '/shipment/images/logo1.png' %}" class="img-fluid" alt="" style="height: 55px !important;">
                     </div>
@@ -97,41 +97,63 @@
                         We are a Co-operation with diversified interest. As a security firm with interest in logistics and the future of tech we stand to transform the world positively.
                     </p>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-md-4">
                     <div>
                         <h3>Quick Links</h3>
-                        <ul class=" text-muted">
-                            <li>
-                                Services
-                            </li>
-                            <li>
-                                Contact
-                            </li>
-                            <li>
-                                Contact
-                            </li>
-                        </ul>
+                        <div class="ps-3">
+                            <p>
+                                <a href="{% url 'shipment_about' %}">
+                                    About
+                                </a>
+                            </p>
+                            <p>
+                                <a href="{% url 'shipment_service' %}">
+                                    Services
+                                </a>
+                            </p>
+                            <p>
+                                <a href="{% url 'contact' %}">
+                                    Contact
+                                </a>
+                            </p>
+                        </div>
+                        
                     </div>
                 </div>
 
-                <div class="col-6 col-md-3">
+                <div class="col-12 col-md-4">
                     <div>
-                        <h3>Track Your Item</h3>
-                        <a href="{% url 'shipment_track' %}" class="btn rounded-pill btn-primary animate__animated animate__slideInUp">
-                            TRACK ITEMS
-                        </a>
+                        <img src="{% static '/shipment/images/longtext1.png' %}" alt="" class="img-fluid">
+                        <div class="d-flex pt-4">
+                            <i class="icofont icofont-whatsapp text-warning icofont-1x"></i> 
+                            <p class="ps-3 text-light">+447851847360</p>
+                        </div>
+
+                        <div class="d-flex">
+                            <i class="icofont  icofont-ui-call text-primary"></i> 
+                            <p class="ps-3 text-light">+447851847360</p>
+                        </div>
+
+                        <div class="d-flex">
+                            <i class="icofont icofont-mail-box text-success"></i> 
+                            <p class="ps-3 text-light">targecorporation@gmail.com</p>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <footer class="border-top bg-light pb-0">
+    <footer class="border-top bg-light py-4">
         <div class=" container">
             <div class="row">
                 <div class="col-12 col-md-6 mx-auto text-center">
-                    <p>All rights reserved. Copyright &copy; <b class=" secondary_color"> Targe
-                            Co-operation </b> </p>
+                    <p>
+                        Copyright &copy; <b class=" secondary_color"> 
+                        Targe Corperation
+                    </p>
+                    <p class="text-muted">All rights reserved</p>
                 </div>
             </div>
         </div>
