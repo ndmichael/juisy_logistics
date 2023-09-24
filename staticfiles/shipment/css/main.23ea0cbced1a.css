@@ -1,0 +1,282 @@
+    @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+    .secondary_color {
+        color: #4169e1 !important;
+        /* color: #0047AB; */
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html,
+    body {
+        width: auto !important;
+    }
+
+    .btn{
+        font-family: 'Gotham Rounded';
+    }
+    
+    .btn-primary {
+        background: #4169e1;
+        border-radius: 22, 5px;
+        padding: 10px;
+
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(255, 255, 255, 0.25), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    }
+    
+    #partners img {
+        width: 150px;
+        height: 100px !important;
+        object-fit: contain;
+    }
+    
+    .ft-features {
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.01);
+        margin: 1em 0;
+        transition: All 2000s ease-in !important;
+        background-color: rgba(255, 255, 255, 0.15) !important;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.25);
+        -moz-backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(7px);
+        /* transform: translateY(40px); */
+    }
+
+    .ft-features > img{
+        transform: translateY(-70px) !important;
+    }
+    
+    #features .icofont {
+        border-radius: 22px;
+        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(255, 255, 255, 0.25), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        background: #4169e1;
+        color: white;
+    }
+    
+    .navbar-light {
+        padding: 5px !important;
+    }
+    
+    .navbar-light .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 1);
+        /* color: #000000; */
+        text-transform: capitalize;
+        font-weight: 700;
+        padding: 5px 20px;
+        font-family: 'Avalon';
+        font-size: 15px;
+        /* padding: 10px; */
+    }
+    
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: orange;
+        /* color: gold; */
+    }
+    
+    .scrolled {
+        display: inline-block;
+        height: auto;
+        background: #4169e1;
+        color: #FFFFFF;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .scrolled .navbar-nav .nav-link {
+        color: #FFFFFF;
+    }
+    
+    .scrolled .navbar-nav .nav-link:hover {
+        color: ORANGE;
+        text-shadow: 0;
+    }
+    
+    .scrolled .navbar-brand {
+        color: #000000;
+        font-family: 'Bourgeois Rounded';
+    }
+    
+    #header {
+        height: 88vh !important;
+        width: 100%;
+        /* background-image: linear-gradient(to bottom, rgba(54, 55, 149, 0.9), rgba(54, 55, 151, 0.4)), url("/static/shipment/images/bg1.347bd5af4c57.jpg"); */
+        background-image: linear-gradient(135deg, rgba(0, 97, 242, .7) 0%, rgba(105, 0, 199, .8) 100%), url("/static/shipment/images/bg23.a64c3f05c7f1.jpg");
+        background-size: cover;
+        background-position: center;
+        color: #FFFFFF;
+    }
+    
+    .feature {
+        min-height: 70vh;
+        width: 100%;
+        background-image: url("/static/shipment/images/Transparent-background-with-dots.d697425e990f.png");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #services2 {
+        min-height: 80vh;
+        width: 100%;
+        background-image: linear-gradient(to right, rgba(11, 14, 211, 0.1), rgba(11, 14, 211, .5)), url("/static/shipment/images/delivery3.17ee6483b2ff.jpg");
+        background-size: cover;
+        background-position: left;
+        color: #FFFFFF;
+    }
+    
+    #services2 ul>li {
+        text-decoration-style: none;
+        list-style-type: none;
+        font-family: 'Gotham Rounded';
+        text-shadow: -2px 2px #000;
+        font-size: 22px;
+        line-height: 2;
+        text-transform: capitalize;
+    }
+    
+    #services2 h4 {
+        color: orange;
+        text-shadow: -2px 2px #000;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h4,
+    h6 {
+        /* font-family: 'Black Han Sans', sans-serif; */
+        font-family: 'Gotham Rounded';
+        font-weight: 100;
+        text-transform: capitalize;
+        letter-spacing: 0 !important;
+    }
+    
+    p {
+        font-family: 'Avalon';
+        /* font-family: 'Gotham Rounded'; */
+        color:#363636;
+        line-height: 1.4;
+    }
+    
+    #header h1 {
+        font-size: 48px;
+    }
+    
+    .custom-shape-divider-bottom-1620085333 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1620085333 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 55px;
+    }
+    
+    .custom-shape-divider-bottom-1620085333 .shape-fill {
+        fill: #FFFFFF;
+    }
+    
+    #brief-abt {
+        text-align: center;
+    }
+    
+    #brief-abt h2 span {
+        font-weight: 900;
+        color: #7b83eb;
+    }
+    
+    #brief-abt p {
+        font-size: 18px;
+    }
+    
+    .service .icofont {
+        filter: drop-shadow(20px 10px 0.5px #e0e0e0);
+        display: inline-block;
+        transform: translate(0, 0);
+    }
+    
+    .service:hover .icofont {
+        animation: icon_animate1 .4s forwards;
+        transition: all 10s;
+    }
+    
+    @keyframes icon_animate1 {
+        0% {
+            filter: drop-shadow(20px 10px 0.5px #e0e0e0);
+        }
+        100% {
+            filter: drop-shadow(0px 0px 0px rgb(56, 56, 56));
+        }
+    }
+    /*
+* testimonial animation
+*/
+    
+    .testimonial img,
+    .testimonial .icofont {
+        transition: transform .5s, color .5s;
+        transform-origin: top;
+    }
+    
+    .testimonial:hover .icofont {
+        color: #4169e1 !important;
+    }
+    
+    .testimonial:hover img {
+        transform: scale(1.05, 1.05);
+    }
+    /** footer **/
+    
+    footer {
+        padding: 2em 10px;
+    }
+    
+    footer a {
+        text-decoration: none;
+        color: #7b83eb;
+    }
+    
+    footer a:hover {
+        color: #555dc1;
+    }
+    /**
+*  ABOUT US
+**/
+    
+    #navbackground {
+        min-height: 60vh;
+        width: 100%;
+        background: linear-gradient(135deg, rgba(0, 97, 242, .8) 0%, rgba(105, 0, 199, .8) 100%);
+        background-size: cover;
+        background-position: bottom;
+        padding-top: 170px;
+    }
+    
+    @media(max-width: 48em) {
+        html,
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .collapse,
+        .navbar-collapse {
+            width: 100% !important;
+            margin: 0 !important;
+            background: #4169e1;
+            padding: 20px !important;
+        }
+        #header h1 {
+            font-size: 2.2em;
+        }
+    }
