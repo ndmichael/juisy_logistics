@@ -74,8 +74,8 @@
     }
     
     .navbar-light .navbar-nav .nav-link:hover {
-        color: orange;
-        /* color: gold; */
+        /* color: orange; */
+        color: gold;
     }
     
     .scrolled {
@@ -91,7 +91,7 @@
     }
     
     .scrolled .navbar-nav .nav-link:hover {
-        color: ORANGE;
+        color: gold;
         text-shadow: 0;
     }
     
