@@ -54,10 +54,10 @@
                 <ul class="navbar-nav me-auto  mb-2 mb-lg-0">
                     {% if user.is_authenticated and user.is_staff %}
                     <li class="nav-item">
-                        <a class="nav-link text-warning" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'account_logout' %}" style="color:gold">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-warning" aria-current="page" href="{% url 'client-dashboard' user.username %}">Dashboard</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'client-dashboard' user.username %}" style="color:gold">Dashboard</a>
                     </li>
                     {% endif %}
                 </ul>
