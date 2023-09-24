@@ -160,7 +160,6 @@
         /* font-family: 'Black Han Sans', sans-serif; */
         font-family: 'Gotham Rounded';
         font-weight: 100;
-        text-transform: capitalize;
         letter-spacing: 0 !important;
     }
     
@@ -280,7 +279,7 @@
         background: linear-gradient(135deg, rgba(0, 97, 242, .8) 0%, rgba(105, 0, 199, .8) 100%);
         background-size: cover;
         background-position: bottom;
-        padding-top: 130px;
+        padding-top: 150px;
     }
     
     @media(max-width: 48em) {
