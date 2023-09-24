@@ -14,9 +14,25 @@
 </section>
 <section class="py-5">
     <div class=" container">
-        <div class=" row">
-            <div class=" col-12 col-md-6 offset-md-1 mx-auto">
-                <form action="" method="POST">
+        <div class=" row bg-white shadow-sm" style="transform: translateY(-100px);">
+            <div class=" col-12 col-md-6" id="direct-contact">
+                <h3>Start Talking With Us</h3>
+                <div class="pt-4">
+                    <h6 class="secondary_color">EMAIL US:</h6>
+                    <h4>targecorporation@gmail.com</h4>
+                </div>
+                <div class="pt-4">
+                    <h6 class="secondary_color">WhatsApp US:</h6>
+                    <h4>+447851847360</h4>
+                </div>
+                <div class="pt-4">
+                    <h6 class="secondary_color">Call Us:</h6>
+                    <h4>+447851847360</h4>
+                </div>
+            </div>
+            <div class=" col-12 col-md-6 p-5">
+                <small class="text-muted">Please note message through forms takes a bit longer, contact us directly.</small>
+                <form action="" method="POST" class="pt-3">
                     {% csrf_token %}
                     <div class="row">
                         <div class="form-group col-md-6 mb-0">
