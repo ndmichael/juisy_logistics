@@ -13,14 +13,14 @@
         </section>
     </div>
 </section>
-<section id="dashboard">
+<section id="create-shipment" class="bg-light">
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="container py-5">
-            <div class="row ">
-                <div class="col-12 col-md-6 px-4 py-2">
-                    <div class="row p-4 shadow bg-light">
-                        <legend class=" border-bottom border-primary pb-3 rounded-3">
+            <div class="row p-3 g-5">
+                <div class="col-12 col-md-6">
+                    <div class="row p-5 shadow bg-white rounded-3">
+                        <legend class=" border-bottom border-primary pb-3 mb-4">
                             <h3>SENDER DETAILS</h3>
                         </legend>
                         <div class="form-group col-12 col-md-12 mb-0">
@@ -44,9 +44,9 @@
                     </div>
                 </div>
                 <!--receiver form starts here -->
-                <div class="col-12 col-md-6 px-4 py-2">
-                    <div class="row p-4 shadow bg-light">
-                        <legend class=" border-bottom border-primary pb-3 rounded-3">
+                <div class="col-12 col-md-6">
+                    <div class="row p-5 shadow bg-white rounded-3">
+                        <legend class=" border-bottom border-primary pb-3 mb-4">
                             <h3>RECEIVER DETAILS</h3>
                         </legend>
                         <div class="form-group col-12 col-md-12 mb-0">
@@ -72,8 +72,8 @@
 
                 <!--item form starts here -->
                 <div class="col-12 col-md-6 px-4 py-2 mx-auto">
-                    <div class="row p-4">
-                        <legend class=" border-bottom border-primary pb-3 rounded-3">
+                    <div class="row">
+                        <legend class=" border-bottom border-primary pb-3 ">
                             <h3>ITEM(s) DETAILS</h3>
                         </legend>
                         <div class="form-group col-12 col-md-12 mb-0">
