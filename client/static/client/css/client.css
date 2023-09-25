@@ -10,3 +10,24 @@ form>a {
     text-decoration: none;
     color: black;
 }
+
+#dashboard-key-link{
+    padding: 4em 0;
+}
+
+#dashboard-key-link a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#dashboard-key-link a .icofont{
+    display: block;
+    color: #4169e1;
+    padding-top: 40px;
+    transition: .3s;
+}
+
+#dashboard-key-link a .icofont:hover{
+    color: #0040ff;
+}
+
