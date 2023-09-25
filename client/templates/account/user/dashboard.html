@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row g-5">
             <div class="col-12 col-md-4">
-                <a href="" class="text-center p-5 border shadow d-block bg-white">
+                <a href="{% url 'create-shipment' %}" class="text-center p-5 border shadow d-block bg-white">
                     <h3>Create Logistic</h3>
                     <p>
                         Here you can create new logistics,
@@ -31,7 +31,7 @@
                 </a>
             </div>
             <div class="col-12 col-md-4">
-                <a href="" class="text-center border p-5 shadow d-block bg-white">
+                <a href="{% url 'shipments' %}" class="text-center border p-5 shadow d-block bg-white">
                     <h3>Manage Logistics</h3>
                     <p>
                         Here you can manage logistics,
@@ -58,9 +58,9 @@
     <div class="container py-5">
         <div class="row ">
             <div class="col-12">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead class="bg-primary text-light">
+                <div>
+                    <table class="table  bg-white shadow-sm">
+                        <thead class="">
                             <th>Package Name</th>
                             <th>Client Name</th>
                             <th>Date</th>
