@@ -6,6 +6,7 @@ from shipment.models import ItemDetail, Status
 
 # Create your views here.
 
+@login_required
 def dashboard(request, username):
     items = ItemDetail.objects.all()
     context = {
@@ -13,6 +14,12 @@ def dashboard(request, username):
         "title": "dashboard-targe"
     }
     return render(request, 'account/user/dashboard.html', context)
+
+def shipments(request):
+    context = {
+
+    }
+    return render(request, 'account/user/all_shipments.html', context)
 
 
 @login_required
