@@ -15,13 +15,14 @@
     </div>
 </section>
 
-<section id="dashboard">
+<section id="dashboard" class="bg-light">
     <div class="container py-5">
         <div class="row ">
             <div class="col-12">
                 <div>
+                    <h2 class="pb-4">All Active Logistics</h2>
                     {% if items %}
-                    <table class="table  bg-white shadow-sm">
+                    <table class="table  bg-white shadow-sm align-middle">
                         <thead class="">
                             <th>Package Name</th>
                             <th>Client Name</th>
@@ -39,7 +40,7 @@
                                 <td>{{item.date_sent}}</td>
                                 <td>{{item.status}}</td>
                                 <td>{{item.paid}}</td>
-                                <td><b>{{item.item_code}}</b></td>
+                                <td class="secondary_color"><><b>{{item.item_code}}</b></td>
                                 <td class=" text-end">
                                     <div class="dropdown d-inline-block">
                                         <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" data-bs-placement="top" title="Edit Logistics">
