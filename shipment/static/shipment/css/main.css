@@ -15,6 +15,14 @@
         width: auto !important;
     }
 
+    .table  td, .table th {
+        padding: 10Spx;
+    }
+
+    .table .btn{
+        padding: 10px 15px !important;
+    }
+
     .btn{
         font-weight: bold;
         border-radius: 10px;
