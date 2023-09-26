@@ -8,7 +8,7 @@ from shipment.models import ItemDetail, Status
 
 @login_required
 def dashboard(request, username):
-    items = ItemDetail.objects.all()
+    items = ItemDetail.objects.all().order_by('-date_recieved')[:5]
     context = {
         "items": items,
         "title": "dashboard-targe"
@@ -16,8 +16,9 @@ def dashboard(request, username):
     return render(request, 'account/user/dashboard.html', context)
 
 def shipments(request):
+    items = ItemDetail.objects.all().order_by('-date_recieved')
     context = {
-
+        "items": items,
     }
     return render(request, 'account/user/all_shipments.html', context)
 
