@@ -1,4 +1,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
     .secondary_color {
         color: #4169e1 !important;
         /* color: #0047AB; */
@@ -166,7 +168,8 @@
     h4,
     h6 {
         /* font-family: 'Black Han Sans', sans-serif; */
-        font-family: 'Gotham Rounded';
+        /* font-family: 'Gotham Rounded'; */
+        font-family: "Titillium Web","Helvetica",Arial,Tahoma,sans-serif;
         font-weight: 100;
         letter-spacing: 0 !important;
     }
