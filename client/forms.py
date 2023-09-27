@@ -53,6 +53,8 @@ class SenderForm(forms.ModelForm):
         widgets = {
           'address': forms.Textarea(attrs={'rows':2}),
         }
+    
+
 
 
 
