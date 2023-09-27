@@ -19,7 +19,19 @@ class ItemTrackForm(forms.Form):
 class ContactForm(forms.Form):
     name = forms.CharField()
     email = forms.EmailField()
-    message = forms.CharField(widget=forms.Textarea(attrs={'rows': '7'}))
+    message = forms.CharField(widget=forms.Textarea(attrs={'rows': '4'}))
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        
+        self.fields["name"].widget.attrs.update(  
+            {'class': 'form-control-lg '})
+        
+        self.fields["email"].widget.attrs.update(
+            {'class': 'form-control-lg'})
+        
+        self.fields["message"].widget.attrs.update(
+            {'class': 'form-control'})
 
 
 class EditSenderForm(forms.ModelForm):
