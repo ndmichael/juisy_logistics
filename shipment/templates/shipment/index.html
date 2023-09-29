@@ -1,13 +1,13 @@
 {% extends 'shipment/base.html' %} {% load static %} {% block content %}
 <section id="header" class="shadow">
     <div class=" container">
-        <div class=" row">
+        <div class=" row" ">
             <div class=" col-12 col-md-7" style="margin-top: 24vh;">
                 <h1 class="animate__animated animate__zoomInDown">
-                    Targe Corporation Logistic, and Courier Services.
+                    Targe Corporation Security, Logistic, and Courier Services.
                 </h1>
                 <p class="py-4 text-light">
-                    We deliver consignments to your door step at ease.
+                    We focus on security and seamless delivery of consignments to your door step at ease.
                 </p>
                 <a href="{% url 'shipment_track' %}" class="btn btn-lg col-12 col-md-8  btn-warning animate__animated animate__slideInUp">
                     TRACK ITEMS
@@ -17,26 +17,67 @@
     </div>
 </section>
 
-<section id="brief-abt" class="py-3 py-md-4">
+<section style="background: #ffea80; padding: 2em 10px 4em 10px;">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 text-center mx-auto">
                 <span class="animate__animated animate__flipInX animate__delay-1s">
-                    <h3 class=" secondary_color fw-bolder">
-                        Our Awesome Services.
-                    </h3> <br />
+                    <h3 class="h2 secondary_color fw-bolder">
+                        Services We Provide.
+                    </h3>
                     <p class=" text-muted">
-                        We make world wide deliveries to
+                        <!-- We make world wide deliveries to
                         any
                         part of the
-                        world.
+                        world. -->
+                        We offer the best services and sales to sooth your security and delivery needs.
                     </p>
                 </span>
-
             </div>
         </div>
+
+        <section class="row g-5 pt-5">
+            <article class="col-12 col-sm-6 col-md-4 ">
+                <div class="d-flex align-content-around shadow p-4 bg-warning">
+                    <i class="icofont icofont-ssl-security icofont-4x"></i>
+                
+                    <div class="ps-3">
+                        <h3>Security</h3>
+                        <p>
+                            We provide to physical, network, and vaults securities, to keep your wealth and data safe.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-md-4">
+                <div class="d-flex shadow p-4 bg-warning">
+                    <i class="icofont icofont-ship-alt icofont-5x"></i>           
+                    <div class="ps-3">
+                        <h3>Logistics</h3>
+                        <p>
+                            We provide to physical, network, and vaults securities, to keep your wealth and data safe.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-12 col-sm-6 col-md-4">
+                <div class="d-flex shadow p-4 bg-warning ">
+                    <i class="icofont icofont-sale-discount icofont-4x"></i>               
+                    <div class="ps-3">
+                        <h3>Vault Sales</h3>
+                        <p>
+                            We provide to physical, network, and vaults securities, to keep your wealth and data safe.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
     </div>
 </section>
+
 
 <section class="py-5 feature">
     <article class=" container">
@@ -59,7 +100,7 @@
                     <div>
                         <h3 class="pb-3" data-aos="fade-up" data-aos-delay="200">Sea Freight</h3>
                         <p data-aos="fade-up" data-aos-delay="300">
-                            Our services span shipement of goods securely and handling all custom duties.
+                            Our services span shipment of goods securely and handling all custom duties in any wharf or seaport.
                         </p>
                     </div>
                 </div>
