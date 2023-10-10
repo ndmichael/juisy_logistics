@@ -144,6 +144,16 @@
         background-size: cover;
         background-position: left;
         color: #FFFFFF;
+        padding-top: 10vh; 
+        padding-bottom: 10vh;
+    }
+
+    #services2 .achievement{
+        padding: 20px;
+        background: #000984;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 97, 242, .7);
+        box-shadow: 0 0 7px rgba(0, 97, 242, .7);
     }
     
     #services2 ul>li {
