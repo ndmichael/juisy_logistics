@@ -140,7 +140,7 @@
     #services2 {
         min-height: 80vh;
         width: 100%;
-        background-image: linear-gradient(to right, rgba(11, 14, 211, 0.1), rgba(11, 14, 211, .5)), url("/static/shipment/images/delivery3.jpg");
+        background-image: linear-gradient(to right, rgba(11, 14, 211, 0.5), rgba(11, 14, 211, .7)), url("/static/shipment/images/delivery3.jpg");
         background-size: cover;
         background-position: left;
         color: #FFFFFF;
