@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, HttpResponseRedirect
+from django.urls import reverse
 from django.contrib import messages
-from django.http import JsonResponse, HttpResponse
+from django.http import  HttpResponse
 from shipment.forms import (
     ItemTrackForm, ContactForm, EditStatusForm,
     EditSenderForm, EditClientForm, EditItemForm
@@ -24,16 +25,22 @@ def track_item (request):
         form = ItemTrackForm(request.POST)
         if form.is_valid():
             q = form.cleaned_data['q']
-            item = ItemDetail.objects.filter(item_code=q).first()
+            # item = ItemDetail.objects.filter(item_code=q).first()
+            item = get_object_or_404(ItemDetail, item_code=q)
+            
             form = ItemTrackForm() 
-            return redirect("shipment_track")
+            context = {
+                'form': form,
+                'item': item,
+                'title': 'tracking'
+            }
     else:
         form = ItemTrackForm()       
-    context = {
-        'form': form,
-        'item': item,
-        'title': 'tracking'
-    }
+        context = {
+            'form': form,
+            'item': item,
+            'title': 'tracking'
+        }
     return render(request, 'shipment/track.html', context)
 
 def services (request):
