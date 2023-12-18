@@ -311,15 +311,18 @@
         }
         .collapse,
         .navbar-collapse {
-            width: 100% !important;
+            width: 100vh !important;
             background: #4169e1;
+            /* margin: 0; */
+            margin-left: -16px;
+            margin-right: -16px;
             padding: 20px !important;
             text-align: center;
         }
 
-        .navbar-light .navbar-nav .nav-link{
+        /* .navbar-light .navbar-nav .nav-link{
             padding: 10px 0;
-        }
+        } */
         #header h1 {
             font-size: 2.2em;
         }
