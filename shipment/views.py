@@ -26,6 +26,7 @@ def track_item (request):
             q = form.cleaned_data['q']
             item = ItemDetail.objects.filter(item_code=q).first()
             form = ItemTrackForm() 
+            return redirect("shipment_track")
     else:
         form = ItemTrackForm()       
     context = {
